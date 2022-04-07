@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Pull') { 
             steps {
-                git 'https://github.com/ShubhamUChoudhary/shubham.git'
+                git branch: 'main', credentialsId: '1', url: 'https://github.com/ShubhamUChoudhary/shubham.git'
             }
         }
         stage('Test') { 
             steps {
-                // 
+                echo 'Hello shubh'
             }
         }
         stage('Deploy') { 
             steps {
-                // 
+                echo 'Hello shubh1'
             }
         }
     }
